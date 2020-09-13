@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+@import "reset";
+@import "modules/messages";
+@import "modules/user";
+@import "modules/flash";
+// @import "modules/show";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+

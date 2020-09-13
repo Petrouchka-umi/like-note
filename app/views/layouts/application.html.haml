@@ -1,0 +1,45 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title LikeNote
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application'
+  %body
+    .wrapper
+      %header.header
+        .header__bar.row
+          %h1.grid-6
+            %h2.title Like Note
+          - if user_signed_in?
+            .user_nav.grid-6
+              .post_user
+                = current_user.name
+              .post_user
+                = link_to "ログアウト", destroy_user_session_path, method: :delete
+          - else
+            .user_nav.grid-6
+              = link_to "ログイン", new_user_session_path, class: "post"
+              = link_to "新規登録", new_user_registration_path, class: "post"
+      = render 'layouts/notifications'
+      = yield
+      %footer.footer
+        %ul.footer_list
+          %li.home 
+            = link_to root_path do
+              = icon('far', 'list-alt', class: "icon")
+          %li.new 
+            = link_to new_message_path do
+              = icon('far', 'edit', class: "icon")
+          %li.wave
+            = link_to moods_path do
+              = icon('fas', 'chart-line', class: "icon")
+          %li.my_page 
+            - if user_signed_in?
+              = link_to user_path(current_user.id) do
+                = icon('far', 'user-circle', class: "icon")
+            - else
+              = link_to root_path do
+                = icon('far', 'user-circle', class: "icon")

@@ -1,0 +1,60 @@
+.contents__form {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
+  margin-bottom: 240px;
+  width: 70vw;
+  border-radius: 7px;
+  .form_box {
+    .form_field {
+      margin: 10px;
+      padding-top:10px;
+      color: lightgray;
+      font-size: 20px;
+      .message_text {
+        border: 1px solid #99FF66;
+        // height: calc(60vh - 20vh);
+        width: calc(70vw - 20px);
+        margin-bottom:5px;
+        padding:5px;
+        border-radius: 5px;
+      } 
+    }
+  }
+  .facemarc {
+    margin: 20px 0;
+    ul.facemarc_list {
+      display: flex;
+      justify-content: space-evenly;
+      .face_select {
+        border: 1px solid #99FF66;
+      }
+      li {
+        opacity: 0.5;
+        width: 85px;
+        text-align: center;
+      }
+      li:hover {
+        opacity: 1;
+      }
+      li:focus {
+        opacity: 1;
+      }
+    }
+  }  
+  .form_submit {
+    display: flex;
+    justify-content: center;
+    .submit {
+      margin-top: 10px;
+      width: 500px;
+      height: 40px;
+      font-size: 22px;
+      font-weight: bold;
+      background-color: white;
+      border: 3px solid skyblue;
+      color: skyblue;
+      border-radius: 10px;
+    }
+  }
+}

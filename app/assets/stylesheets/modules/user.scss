@@ -1,0 +1,36 @@
+.contents_user{
+  padding-top: 10px;
+  background-color: seashell;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: calc(100vh - 120px);
+  .content {
+    font-size: 40px;
+    width: 200px;
+    margin-top: 20px;
+    color: skyblue;
+    font-weight: bold;
+  }
+  .new_user {
+    .field {
+      font-size: large;
+      margin: 30px;
+      .user_text {
+        width: 400px;
+        height: 40px;
+      }
+    }
+    .actions {
+      margin: 30px;
+      .submit_user {
+        background-color: whitesmoke;
+        color: skyblue;
+        border: 2px solid  skyblue;
+        width: 200px;
+        border-radius: 4px;
+      }
+    }
+  }
+}

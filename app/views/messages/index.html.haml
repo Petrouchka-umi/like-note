@@ -1,0 +1,25 @@
+.contents
+  .message_main 3行ポジティブ日記 〜ポジティブなことを書き出そう！〜
+  - if user_signed_in?
+    .user_nav.grid-7
+      - @messages.each do |message|
+        .contents__post 
+          %ul.text_list
+            %li.message_text1
+              = message.text1
+            %li.message_text2
+              = message.text2
+            %li.message_text3
+              = message.text3
+          .message_info
+            .message_time
+              = message.created_at.strftime("%Y年%m月%d日")
+            .message_image
+              = image_tag message.image.url, size: "55x55", alt: "face", claas: "face_image"
+              -# = message.image
+  - else 
+    .user_nav.grid-8
+      .user_nav_image
+        = image_tag 'diary.jpeg', alt: "画像", class: "img"
+      .user_nav_message
+        新規登録をして3行ポジティブ日記を始めよう！

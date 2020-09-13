@@ -1,0 +1,4 @@
+.contents
+  .message_main 〜毎日の気分の波をチェックしよう！〜
+  .mood_chart
+    = line_chart Mood.group(:status).count

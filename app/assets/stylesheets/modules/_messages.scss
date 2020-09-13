@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+}
+.contents {
+  background-color: seashell;
+  overflow: hidden;
+  padding-top: 20px;
+  height: calc(100vh - 120px);
+  overflow: scroll;
+  .message_main {
+  color: #d37b33;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+  }
+  .user_nav.grid-8 {
+    color:#d37b33;
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;
+    margin: 40px;
+    position: relative;
+    .img {
+      top: 20px;
+      width: 90%;
+      height: 70%;
+    }
+    .user_nav_message {
+      width: 600px;
+      position: absolute;
+      top: 150px;
+      left: 70px;
+    }
+  }
+  .contents__post {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+    width: calc(100vw - 30vw);
+    // height: calc(100vh - 50vh);
+    background-color:	white;
+    border-radius: 10px;
+    padding: 1px;
+    border: 1px solid #99FF66;
+    ul.text_list {
+      li {
+        color: rgba(0, 0, 0, 0.8);
+        padding: 5px 10px;
+        text-decoration: underline wavy lightgreen;
+      }
+    }
+    .message_info {
+      display: flex;
+      .message_time {
+        margin: 4px 10px;
+        padding: 3px 5px;
+        height: calc(50vh - 45vh);
+        font-size: 20px;
+        color: sandybrown;
+      }
+      .message_image {
+        margin-left: 120px;
+      }
+    }
+  }
+}

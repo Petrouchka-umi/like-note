@@ -1,0 +1,30 @@
+.contents
+  .message_main 〜今日あったポジティブなことを書こう！〜
+  .contents__form
+    = form_with model: @message, html: {class: "form_box"}, local: true do |f|
+      .form_field
+        = f.text_area :text1, class: "message_text", placeholder: "keep a diary"
+        = f.text_area :text2, class: "message_text", placeholder: "keep a diary"
+        = f.text_area :text3, class: "message_text", placeholder: "keep a diary"
+      .message_main ~今日の気分はどんな感じ？ 左のボックスから選ぼう！〜
+      .facemarc
+        %ul.facemarc_list
+          = f.select :image, [["悪い", "bad.png"],["悲しい", "sad.png"],["普通", "nomal.png"],["ハッピー", "happy.png"],["最高", "heart.png"]], selected: "nomal.png", class: "face_select", required: true
+          -# = f.select :image, [["悪い", 1],["悲しい", 2],["普通", 3],["ハッピー", 4],["最高", 5]], selected: 3, class: "face_select", required: true
+          %li.heart
+            = image_tag 'heart.png', size: "80x80", alt: "画像", class: "face"
+            * 最高 *
+          %li.happy
+            = image_tag 'happy.png', size: "80x80", alt: "画像", class: "face"
+            * ハッピー *
+          %li.nomal
+            = image_tag 'nomal.png', size: "80x80", alt: "画像", class: "face"
+            * 普通 *
+          %li.sad
+            = image_tag 'sad.png', size: "80x80", alt: "画像", class: "face"
+            * 悲しい *
+          %li.bad
+            = image_tag 'bad.png', size: "80x80", alt: "画像", class: "face"
+            * 悪い *
+      .form_submit
+        = f.submit 'Save', class: "submit"

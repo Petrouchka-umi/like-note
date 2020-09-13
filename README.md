@@ -35,9 +35,10 @@ Things you may want to cover:
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|title|string|null: false|
+|text1|text|null: false|
+|text2|text|null: false|
+|text3|text|null: false|
 |image|string|null: false|
-|text|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
