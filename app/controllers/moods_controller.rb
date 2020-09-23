@@ -1,6 +1,13 @@
 class MoodsController < ApplicationController
+  before_action :move_to_index
+  
   def index
-    # @status = Mood.where(status: ).group("date(created_at)").count
-    # @message_status = Message.where(image: params[:image]).order(created_at: "DESC").to_a
+    @mood = Mood.all
+  end
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to root_path
+    end
   end
 end

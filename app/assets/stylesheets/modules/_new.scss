@@ -2,7 +2,6 @@
   margin-right: auto;
   margin-left: auto;
   margin-top: 10px;
-  margin-bottom: 240px;
   width: 70vw;
   border-radius: 7px;
   .form_box {
@@ -13,7 +12,6 @@
       font-size: 20px;
       .message_text {
         border: 1px solid #99FF66;
-        // height: calc(60vh - 20vh);
         width: calc(70vw - 20px);
         margin-bottom:5px;
         padding:5px;
@@ -23,21 +21,29 @@
   }
   .facemarc {
     margin: 20px 0;
+    .select_form {
+      display: flex;
+      justify-content: center;
+      color: skyblue;
+      font-size: 20px;
+      .select_box {
+        display: flex;
+        margin: 0 20px;
+        .form_img {
+          margin: 0 10px;
+        }
+      }
+    }
     ul.facemarc_list {
+      margin-top: 20px;
       display: flex;
       justify-content: space-evenly;
-      .face_select {
-        border: 1px solid #99FF66;
-      }
       li {
-        opacity: 0.5;
+        opacity: 0.8;
         width: 85px;
         text-align: center;
       }
       li:hover {
-        opacity: 1;
-      }
-      li:focus {
         opacity: 1;
       }
     }

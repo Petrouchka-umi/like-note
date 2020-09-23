@@ -15,10 +15,12 @@
  */
 
 @import "reset";
-@import "modules/messages";
-@import "modules/user";
 @import "modules/flash";
-// @import "modules/show";
+@import "modules/messages";
+@import "modules/new";
+@import "modules/show";
+@import "modules/user";
+@import "modules/index";
 @import "font-awesome-sprockets";
 @import "font-awesome";
 

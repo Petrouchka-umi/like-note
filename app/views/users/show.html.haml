@@ -1,17 +1,27 @@
 .contents
-  .user_show
-    マイページ
-    .user_name
-      Name ：
-      = current_user.name
-    .user_email
-      Email :
-      = current_user.email
-      -# ユーザーの編集画面へ偏移できるLink追加
-    
-  .content_show 
-    このアプリの説明
-    .content_info
-      %h1 3行ポジィティブ日記
-      %p 毎日、今日あったポジティブなことを3つ書き出そう。そして、今日の気分を5つのフェイスマークから選んで記録しよう！選んだフェイスマークは、グラフ化されて日々の気分の波がわかります。
-      -# 詳しい説明と画像
+  .contents_show
+    .user_show  
+      %h2 ** マイページ **
+      %h1 ユーザー情報
+      .user_name
+        Name ：
+        = current_user.name
+      .user_email
+        Email :
+        = current_user.email
+        -# ユーザーの編集画面へ偏移できるLink追加
+    .content_show 
+      %h1 このアプリの説明
+      .content_info
+        %p テーマ：3行ポジィティブ日記
+        %p ・日記を書くのように、今日あったポジティブなことを3つ書き出そう。
+        %p ・今日の気分を5つのフェイスマークから選んで記録しよう！選んだフェイスマークは、グラフ化されて日々の気分の波がチェックできる！
+        %p ○フッター部分の説明です。それぞれのアイコンは以下の意味です。
+        .content_image
+          = image_tag 'footer.png', size: "700x70", alt: "画像", class: "img"
+          %p.except --記録一覧 -- 新規投稿 --- グラフ --- マイページ 
+        -# 詳しい説明と画像
+        .content_new
+          %p ○投稿部分の説明です。その時の気分を下のfacemarcを基準に選ぼう。
+          = image_tag 'new.png', size: "600x350", alt: "画像", class: "img"
+          %p ・赤枠で囲んでいるfacemarcと気分の二つの選択ボックスは同じものを選ぼう。異なる選択肢を選択すると、実際のdiaryとグラフが異なってしまうので注意しましょう。

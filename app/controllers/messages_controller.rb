@@ -7,6 +7,7 @@ class MessagesController < ApplicationController
   
   def new
     @message = Message.new
+    @message.build_mood
   end
 
   def create
@@ -22,7 +23,7 @@ class MessagesController < ApplicationController
 
   private
   def message_params
-    params.require(:message).permit(:text1, :text2, :text3, :image).merge(user_id: current_user.id)
+    params.require(:message).permit(:text1, :text2, :text3, :image, mood_attributes: [:status]).merge(user_id: current_user.id)
   end
 
   def move_to_index

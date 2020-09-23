@@ -3,7 +3,6 @@ class CreateMoods < ActiveRecord::Migration[6.0]
     create_table :moods do |t|
       t.string :status, null: false
       t.references :message, forenign_key: true
-      t.references :user, forenign_key: true
       t.timestamps
     end
   end

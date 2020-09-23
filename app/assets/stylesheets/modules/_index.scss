@@ -1,0 +1,22 @@
+.mood_chart {
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.facemarc_chart {
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    li {
+      width: 70px;
+      text-align: center;
+      opacity: 0.9;
+    }
+  }
+}
