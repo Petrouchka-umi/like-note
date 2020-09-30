@@ -10,7 +10,7 @@
       .facemarc
         .select_form
           .select_box
-            = f.label :image, "facemarc", class: 'form_img' 
+            = f.label :image, "facemark", class: 'form_img' 
             = f.select :image, [["悪い", "bad.png"],["悲しい", "sad.png"],["普通", "nomal.png"],["ハッピー", "happy.png"],["最高", "heart.png"]], selected: "nomal.png", class: "face_select", required: true 
           .select_box
             = f.fields_for :mood do |i| 
