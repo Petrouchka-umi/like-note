@@ -42,7 +42,7 @@ Things you may want to cover:
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
-- has_one :moods
+- has_one :mood
 
 ## moodsテーブル
 |Column|Type|Options|
