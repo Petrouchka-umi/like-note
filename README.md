@@ -1,7 +1,7 @@
 # Like Note
 ### 「ポジティブ思考を手に入れて、自分を好になろう」をコンセプトに作成したポジティブ3行日記アプリ
 
-![トップページ](app_main.jpg)
+<img src="app_main.jpg" width="360px">  
 
 # 概要
 
@@ -21,17 +21,17 @@
   
 3.3つの文章記入欄に文章を記入し、二箇所の気分選択欄で同じ気分を選択します。  
   
-![投稿](app_new.png)  
+<img src="app_new.png" width="360px">  
   
 4.投稿すると、投稿一覧とグラフが更新されます。  
   
-##投稿一覧
+##投稿一覧画面  
   
-![投稿一覧](app_index.png)  
+<img src="app_index.png" width="360px">    
   
-##グラフ  
+##グラフ画面  
 
-![グラフ](chart.png)  
+<img src="chart.png" width="360px">    
   
 # 機能一覧
 |機能|概要|
