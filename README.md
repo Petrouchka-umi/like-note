@@ -11,6 +11,9 @@
 今日あったポジティブな出来事３つとその日の気分を記録する日記のようなアプリです。
 気分はフェスマークで表現し、日付別に気分の波をグラフとして見ることも可能です。
 
+## アプリの挙動  
+<img src="https://user-images.githubusercontent.com/67958506/102688450-156e0400-423a-11eb-9830-88bb88107b4e.gif" width="360px">
+  
 # App URL
  https://like-note.herokuapp.com/
  
