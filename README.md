@@ -53,7 +53,6 @@
 ・Ruby 2.6.5  
 ・Rails 6.0.0  
 ・mysql2 0.5.3  
-・JavaScript  
 ・heroku 7.46.0  
 
 # DB設計  
