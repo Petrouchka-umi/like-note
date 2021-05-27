@@ -1,8 +1,8 @@
 class MessagesController < ApplicationController
-  before_action :move_to_index, except: :index
 
   def index
-    @messages = Message.includes(:user).order("created_at DESC")
+    @messages = Message.includes(:user)
+    @messages = current_user.messages.order("created_at DESC")
   end
   
   def new
@@ -11,7 +11,7 @@ class MessagesController < ApplicationController
   end
 
   def create
-    # binding.pry
+    binding.pry
     @message = Message.create(message_params)
     if @message.save
       redirect_to messages_path, notice: 'diaryが保存されました'
@@ -23,13 +23,7 @@ class MessagesController < ApplicationController
 
   private
   def message_params
-    params.require(:message).permit(:text1, :text2, :text3, :image, mood_attributes: [:status]).merge(user_id: current_user.id)
-  end
-
-  def move_to_index
-    unless user_signed_in?
-      redirect_to action: :index
-    end
+    params.require(:message).permit(:text1, :text2, :text3, :image, mood_attributes: [:status, :user_id]).merge(user_id: current_user.id)
   end
 
 end

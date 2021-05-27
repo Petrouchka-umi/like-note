@@ -1,29 +1,23 @@
 .contents
   .message_main 3行ポジティブ日記 〜ポジティブなことを書き出そう！〜
-  - if user_signed_in?
-    .user_nav.grid-7
-      - if @messages.length > 0
-        - @messages.each do |message|
-          .contents__post 
-            %ul.text_list
-              %li.message_text1
-                = message.text1
-              %li.message_text2
-                = message.text2
-              %li.message_text3
-                = message.text3
-            .message_info
-              .message_time
-                = message.created_at.strftime("%Y年%m月%d日")
-              .message_image
-                = image_tag message.image.to_s, size: "55x55", alt: "face",claas: "face_image"
-      - else
-        .message_none
-          = image_tag 'book.jpeg', alt: "画像", class: "img"
-        .user_nav_message
-          日々のdiaryを記録していこう！
-  - else 
-    .user_nav.grid-8
-      .user_nav_image
-        = image_tag 'diary.jpeg', alt: "画像", class: "img"
-        .user_nav_message 新規登録をしてLikeNoteを始めよう！
+  .user_nav.grid-7
+    - if @messages.length > 0
+      - @messages.each do |message|
+        .contents__post 
+          %ul.text_list
+            %li.message_text1
+              = message.text1
+            %li.message_text2
+              = message.text2
+            %li.message_text3
+              = message.text3
+          .message_info
+            .message_time
+              = message.created_at.strftime("%Y年%m月%d日")
+            .message_image
+              = image_tag message.image.to_s, size: "55x55", alt: "face",claas: "face_image"
+    - else
+      .message_none
+        = image_tag 'book.jpeg', alt: "画像", class: "img"
+      .user_nav_message
+        日々のdiaryを記録していこう！

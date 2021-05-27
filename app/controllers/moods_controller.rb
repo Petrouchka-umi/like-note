@@ -2,7 +2,9 @@ class MoodsController < ApplicationController
   before_action :move_to_index
   
   def index
-    @mood = Mood.all
+    @mood = Mood.includes(:user)
+    @messages = current_user.messages
+    @user = User.where(user_id: current_user.id)
   end
 
   def move_to_index

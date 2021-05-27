@@ -1,8 +1,11 @@
 .contents
   .message_main 〜毎日の気分の波をチェックしよう！〜
   .mood_chart
-    -# = line_chart @mood.group_by_day(:created_at, format: "%m月%d日", series: false ).sum(:status), min: 0, max: 5, xtitle: "日付", ytitle: "気分", width: "600px", height: "450px", discrete: true
-    = line_chart @mood.chart_date, min: 0, max: 5, xtitle: "日付", ytitle: "気分", width: "600px", height: "450px", discrete: true
+    - if @messages.length > 0  
+      = line_chart @mood.chart_date, min: 0, max: 5, xtitle: "日付", ytitle: "気分", width: "600px", height: "450px", discrete: true
+    - else
+      = image_tag 'diary.jpeg', alt: "画像", class: "chart_img"
+      .message_main 新規投稿して気分のグラフを作ろう！
   .message_main
     〜Facemarkと気分の数値〜
   .facemarc_chart

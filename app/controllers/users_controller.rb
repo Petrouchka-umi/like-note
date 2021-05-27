@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   
   def show
     user = User.find(params[:id])
-    @name = current_user.name
+    @user = current_user.id
     @messages = user.messages
   end
 

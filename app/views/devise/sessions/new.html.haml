@@ -1,6 +1,6 @@
 .contents_user
   .content
-    %h2 Log in
+    %h2 ようこそ!
   = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
     .field
       = f.label :email
@@ -16,4 +16,5 @@
         = f.label :remember_me
     .actions
       = f.submit "Log in", class: "submit_user"
+  .user_main ~ 初めての方は、新規登録をお願いします！ ~
   -# = render "devise/shared/links"
